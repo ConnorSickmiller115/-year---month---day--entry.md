@@ -1,0 +1,20 @@
+Today  we worked on piping functions which is an addon to the dplyr package, pipes are good for using information in previous code so you don't have to use it over and over again
+it makes it more readable which allows us to edit the code more easily and identify errors.
+To use the pipe function it is necessary to download the dplyr package, dplyr also has the mutate, select, filter, and summarise commands buildt in. these packages will most likely
+be used to modify future data sets.
+
+An example of the filter fnction is as follows 
+
+starwars %>% 
+  filter(species == "Droid")
+#> # A tibble: 5 x 13
+#>   name  height  mass hair_color skin_color  eye_color birth_year gender
+#>   <chr>  <int> <dbl> <chr>      <chr>       <chr>          <dbl> <chr> 
+#> 1 C-3PO    167   75. <NA>       gold        yellow          112. <NA>  
+#> 2 R2-D2     96   32. <NA>       white, blue red              33. <NA>  
+#> 3 R5-D4     97   32. <NA>       white, red  red              NA  <NA>  
+#> 4 IG-88    200  140. none       metal       red              15. none  
+#> 5 BB8       NA   NA  none       none        black            NA  none 
+
+I think the filter funciton is a little more simmplistic than the group by function we have used before but I sitll struggle with the difference between the two.
+
