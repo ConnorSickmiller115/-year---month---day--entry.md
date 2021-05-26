@@ -1,0 +1,33 @@
+library(tidyverse)
+library(palmerpenguins)
+
+penguins
+
+## Grouping
+penguins %>%
+group_by(species, island)  ###Groups by both species and islands (combinations)
+
+
+
+
+## Grouping
+penguins %>%
+group_by(species, island) %>%
+ungroup(species)
+
+###ungroup function can be used to filter our data after manipulating it
+
+
+penguins %>%
+group_by(species, island) %>%
+summarise(count=n()) %>%
+mutate(perc_species = count/ sum(count))   ###using two functions within one to create a new variable percent species####
+
+##Mutate
+
+penguins %>%
+mutate(bill_length_in = bill_length_mm /25.4) %>%
+select(species:bill_length_mm, bill_length_in) %>%
+slice_head(n=10) %>%
+mutate(length_mm_rank = min_rank(bill_length_mm),
+length_in_rank= min_rank(bill_length_in))
