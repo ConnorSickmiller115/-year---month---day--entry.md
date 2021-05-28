@@ -1,0 +1,43 @@
+Today I worked more on the dplyr package and mutate functions by going over a reference sheet i found online
+
+starwars %>%
+  select(name, mass, species) %>%
+  mutate(mass_norm = mass / mean(mass, na.rm = TRUE))
+ 
+ This function selects name, mass, and species of races in star wars and then mutates it to create a normal distribution of mass.
+ 
+ starwars %>%
+  select(name, mass, species) %>%
+  group_by(species) %>%
+  mutate(mass_norm = mass / mean(mass, na.rm = TRUE))
+  
+  with the group by function we can further our analysis by reducing total observations by placing it in groups
+  
+  starwars %>%
+ select(name, mass) %>%
+ mutate(
+  mass2 = mass * 2,
+  mass2_squared = mass2 * mass2
+)
+
+you can make new varaiables in the mutate function, even making new ones based on previously made ones in the same line of code with a comma
+
+starwars %>%
+ select(name, height, mass, homeworld) %>%
+ mutate(
+  mass = NULL,
+  height = height * 0.0328084 # convert to feet
+)
+
+mutate can remove variables too which i did not know about
+
+starwars %>%
+ select(name, homeworld, species) %>%
+ mutate(across(!name, as.factor))
+ 
+ This accross function is still confusing me I will ask about it in class
+ 
+ vars <- c("mass", "height")
+mutate(starwars, prod = .data[[vars[[1]]]] * .data[[vars[[2]]]])
+
+selecting vectors within a mutate is also something that can be done but agian it is very confusing and i need to work on it more
