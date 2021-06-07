@@ -1,0 +1,4 @@
+Today I worked on the learning target check which I think went pretty smoothly, I used filter commands, arrange commands, and a lot of the dplyr package.
+I essentially think of the dplyr package as a package that streamlines manipulating data in one code chunk, instead of creating multiple data frames and editing them 
+in excel dplyr allows us to manipulate all in one sequence and in one data frame. what I struggled most on was creating the new manipulated columns but eventually I was able
+to figure it out with a little help from youtube examples.
