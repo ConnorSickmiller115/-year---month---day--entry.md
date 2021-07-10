@@ -1,0 +1,16 @@
+                      Today I reviewed more of merging documents for a project, specifically reviewing old primers to revive my learning on the subject since it has
+                      been awhile since i did so.  The trickiest thing is finding out how to merge the files that have the same/ different variables.  I am trying to use the join
+                      function in an effort to figure it out.
+                      
+                      merge(x, y, …)
+# S3 method for default
+merge(x, y, …)
+
+# S3 method for data.frame
+merge(x, y, by = intersect(names(x), names(y)),
+      by.x = by, by.y = by, all = FALSE, all.x = all, all.y = all,
+      sort = TRUE, suffixes = c(".x",".y"), no.dups = TRUE,
+      incomparables = NULL, …)
+      
+      
+          Specifiicaly the "by = intersect" part is giving me the most trouble.
